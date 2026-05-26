@@ -1,0 +1,278 @@
+/* ── Reset & Variabel Warna ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --biru:    #2563eb;
+  --biru-2: #1d4ed8;
+  --teks:   #1e293b;
+  --teks-2: #64748b;
+  --bg:     #f8faff;
+  --putih:  #ffffff;
+  --border: #e2e8f0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--teks);
+  line-height: 1.6;
+}
+
+/* ── NAVIGASI ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--putih);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--biru);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--teks-2);
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.nav-links a:hover {
+  color: var(--biru);
+}
+
+/* ── HERO ── */
+.hero {
+  padding: 5rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.salam {
+  font-size: 1.1rem;
+  color: var(--teks-2);
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--teks);
+  margin-bottom: 0.5rem;
+}
+
+.jabatan {
+  font-size: 1.2rem;
+  color: var(--biru);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  color: var(--teks-2);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+
+/* ── TOMBOL ── */
+.btn {
+  display: inline-block;
+  background: var(--biru);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s, transform .1s;
+}
+
+.btn:hover {
+  background: var(--biru-2);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 2px solid var(--biru);
+  color: var(--biru);
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 2rem;
+  transition: all .2s;
+}
+
+.btn-outline:hover {
+  background: var(--biru);
+  color: white;
+}
+
+/* ── PREVIEW PROYEK ── */
+.preview-proyek {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.preview-proyek h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* ── GRID KARTU PROYEK ── */
+.grid-proyek {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.kartu {
+  background: var(--putih);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.kartu:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.kartu h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.kartu p {
+  color: var(--teks-2);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.teknologi {
+  font-size: 0.8rem;
+  background: #eff6ff;
+  color: var(--biru);
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+/* ── FORM KONTAK ── */
+.form-kontak {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+}
+
+.form-kontak h1 {
+  margin-bottom: 0.5rem;
+}
+
+.form-kontak p.sub {
+  color: var(--teks-2);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color .2s;
+  background: var(--putih);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--biru);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button[type=submit] {
+  background: var(--biru);
+  color: white;
+  border: none;
+  padding: 0.85rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+button[type=submit]:hover {
+  background: var(--biru-2);
+}
+
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.alert.sukses {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.alert.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* ── FOOTER ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--teks-2);
+  font-size: 0.9rem;
+  margin-top: 3rem;
+}
+        
